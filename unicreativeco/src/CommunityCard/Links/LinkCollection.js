@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LinkLabel from './LinkLabel.js';
 import IconCollection from './IconCollection.js';
+import LinkLabel from './LinkLabel.js';
 
 function LinkCollection(props) {
 
