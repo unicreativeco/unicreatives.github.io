@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
+import * as colors from './Colors.js';
+import CommunityCard from './CommunityCard/CommunityCard';
+
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ backgroundColor: colors.gray.darkest, height: '100%' }}>
+      <CommunityCard
+        image="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+        name="Thomas Lu"
+        username="thomas_a_lu"
+        description="Thomas is an Arizonian studying CS at Cornell. He's also interested in design, sustainability, finance, and (most importantly) boba."
+        url="thomaslu.me"
+        social={{
+          facebook: '',
+          github: 'github',
+          instagram: '',
+          linkedin: 'linkedin',
+          medium: '',
+          twitter: '',
+          youtube: '',
+        }}
+        skillset={{
+          art: false,
+          code: true,
+          design: true,
+          music: false,
+          photo: false,
+          video: false,
+          write: false,
+        }}
+      />
+
     </div>
-  );
+  )
 }
 
 export default App;
