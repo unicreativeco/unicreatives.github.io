@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "PTSansPro";
+    src: url("../fonts/PTSansPro-Light.otf") format("opentype")
+}
+
+body {
+    background-color: #1B1F23;
+    font-family: "PTSansPro";
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.uni-nav {
+    background-color: #1B1F23;
+    height: 130px;
+}
+
+.bg-uni {
+    background-color: #1B1F23;
+}
+
+.text-handle {
+    color: #F28CB0;
+}
+
+.text-desc {
+    color: #959DA5;
+}
+
+.primary {
+    color: white;
+}
+
+.secondary {
+    color: gray;
+    margin: 0 0 50px 0;
+}
+
+#filter-label {
+    color: white;
+}
+
+.filter-badge {
+    background-color: #2F363D;
+    color: #F28CB0;
+}
+
+.btn {
+    padding: 0;
+}
+
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+.sidebar {
+    -ms-flex: 0 0 100px;
+    flex: 0 0 100px;
+}
+
+.filter {
+    margin: 10px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    background-color: #1B1F23;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+.f-act {
+    background-color: #F28CB0;
+}
+
+.icon {
+    height: 20px;
+    widows: 20px;
+}
+
+.card {
+    margin: 20px;
+    width: 273px;
+}
+
+.pic {
+    height: 300px;
+    width: 300px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    background-size: cover;
+}
+
+.role-circle {
+    position: absolute;
+    top: 15px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    background-color: #1B1F23;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    z-index: 5;
+}
+
+.role-connect {
+    position: absolute;
+    top: 15px;
+    height: 40px;
+    width: 30px;
+    background-color: #1B1F23;
+    z-index: 0;
+}
+
+.role-icon {
+    height: 20px;
+    width: 20px;
+}
+
+.p-icon {
+    height: 15px;
+    widows: 15px;
+    margin-right: 8px;
+}
+
+.p-link {
+    font-size: 14px;
+}
+
+.round {
+    border-radius: 15px;
+}
+
+.round-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.socialIcon {
+    margin-right: 12px;
+}
+
+.secondary {
+    font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .sidebar {
+        -ms-flex: 0 0 1000px;
+        flex: 0 0 1000px;
+    }
+
+    .card {
+        margin: 20px auto;
+        width: 273px;
+    }
+}
+

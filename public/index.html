@@ -1,43 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<html class="no-js">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Uni Creatives</title>
+    <meta name="description" content="Uni Creatives">
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark uni-nav">
+        <div class="container">
+            <svg width="132" height="60" viewBox="0 0 351 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M276 112.5C276 133.211 292.789 150 313.5 150C334.211 150 351 133.211 351 112.5V37.5C351 16.7893 334.211 0 313.5 0C292.789 0 276 16.7893 276 37.5V112.5Z"
+                    fill="#5565BC" />
+                <path
+                    d="M266 122.5C266 143.211 282.789 160 303.5 160C324.211 160 341 143.211 341 122.5V47.5C341 26.7893 324.211 10 303.5 10C282.789 10 266 26.7893 266 47.5V122.5Z"
+                    fill="#697CE0" />
+                <path
+                    d="M135 125C135 138.807 146.193 150 160 150H260C273.807 150 285 138.807 285 125V75C285 33.5786 251.421 0 210 0C168.579 0 135 33.5786 135 75V125Z"
+                    fill="#DEC544" />
+                <path
+                    d="M125 135C125 148.807 136.193 160 150 160H250C263.807 160 275 148.807 275 135V85C275 43.5786 241.421 10 200 10C158.579 10 125 43.5786 125 85V135Z"
+                    fill="#FADE4D" />
+                <path
+                    d="M10 25C10 11.1929 21.1929 0 35 0H135C148.807 0 160 11.1929 160 25V75C160 116.421 126.421 150 85 150C43.5786 150 10 116.421 10 75V25Z"
+                    fill="#CB3B6F" />
+                <path
+                    d="M0 35C0 21.1929 11.1929 10 25 10H125C138.807 10 150 21.1929 150 35V85C150 126.421 116.421 160 75 160C33.5786 160 0 126.421 0 85V35Z"
+                    fill="#E84680" />
+            </svg>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#content"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="content">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Work</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+    </div>
+
+    <div class="container mb-5">
+        <h1 class="primary">Under the Hood</h1>
+        <h3 class="secondary">The creatives behind the magic ✨</h3>
+
+        <p id="filter-label">FILTERING BY</p>
+
+        <div class="row">
+            <div class="col sidebar">
+                <button class="btn" onClick="filter('art')">
+                    <span id="art-c" class="filter">
+                        <svg id="art-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12.6667 2H3.33333C2.59695 2 2 2.59695 2 3.33333V12.6667C2 13.403 2.59695 14 3.33333 14H12.6667C13.403 14 14 13.403 14 12.6667V3.33333C14 2.59695 13.403 2 12.6667 2Z" />
+                            <path
+                                d="M5.66667 6.66667C6.21895 6.66667 6.66667 6.21895 6.66667 5.66667C6.66667 5.11438 6.21895 4.66667 5.66667 4.66667C5.11438 4.66667 4.66667 5.11438 4.66667 5.66667C4.66667 6.21895 5.11438 6.66667 5.66667 6.66667Z" />
+                            <path d="M14 10L10.6667 6.66667L3.33333 14" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('code')">
+                    <span id="code-c" class="filter">
+                        <svg id="code-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.6667 12L14.6667 8L10.6667 4" />
+                            <path d="M5.33333 4L1.33333 8L5.33333 12" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('design')">
+                    <span id="design-c" class="filter">
+                        <svg id="design-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 12.6667L12.6667 8L14.6667 10L10 14.6667L8 12.6667Z" />
+                            <path d="M12 8.66667L11 3.66667L1.33334 1.33333L3.66667 11L8.66667 12L12 8.66667Z" />
+                            <path d="M1.33334 1.33333L6.39067 6.39067" />
+                            <path
+                                d="M7.33333 8.66667C8.06971 8.66667 8.66667 8.06971 8.66667 7.33333C8.66667 6.59695 8.06971 6 7.33333 6C6.59695 6 6 6.59695 6 7.33333C6 8.06971 6.59695 8.66667 7.33333 8.66667Z" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('music')">
+                    <span id="music-c" class="filter">
+                        <svg id="music-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 12V3.33333L14 2V10.6667" />
+                            <path
+                                d="M4 14C5.10457 14 6 13.1046 6 12C6 10.8954 5.10457 10 4 10C2.89543 10 2 10.8954 2 12C2 13.1046 2.89543 14 4 14Z" />
+                            <path
+                                d="M12 12.6667C13.1046 12.6667 14 11.7712 14 10.6667C14 9.5621 13.1046 8.66667 12 8.66667C10.8954 8.66667 10 9.5621 10 10.6667C10 11.7712 10.8954 12.6667 12 12.6667Z" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('photo')">
+                    <span id="photo-c" class="filter">
+                        <svg id="photo-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15.3333 12.6667C15.3333 13.0203 15.1929 13.3594 14.9428 13.6095C14.6928 13.8595 14.3536 14 14 14H2.00001C1.64638 14 1.30724 13.8595 1.0572 13.6095C0.807148 13.3594 0.666672 13.0203 0.666672 12.6667V5.33333C0.666672 4.97971 0.807148 4.64057 1.0572 4.39052C1.30724 4.14048 1.64638 4 2.00001 4H4.66667L6.00001 2H10L11.3333 4H14C14.3536 4 14.6928 4.14048 14.9428 4.39052C15.1929 4.64057 15.3333 4.97971 15.3333 5.33333V12.6667Z" />
+                            <path
+                                d="M7.99999 11.3333C9.47275 11.3333 10.6667 10.1394 10.6667 8.66667C10.6667 7.19391 9.47275 6 7.99999 6C6.52724 6 5.33333 7.19391 5.33333 8.66667C5.33333 10.1394 6.52724 11.3333 7.99999 11.3333Z" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('video')">
+                    <span id="video-c" class="filter">
+                        <svg id="video-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15.3333 4.66667L10.6667 8L15.3333 11.3333V4.66667Z" />
+                            <path
+                                d="M9.33334 3.33333H2.00001C1.26363 3.33333 0.666672 3.93029 0.666672 4.66667V11.3333C0.666672 12.0697 1.26363 12.6667 2.00001 12.6667H9.33334C10.0697 12.6667 10.6667 12.0697 10.6667 11.3333V4.66667C10.6667 3.93029 10.0697 3.33333 9.33334 3.33333Z" />
+                        </svg>
+                    </span>
+                </button>
+                <button class="btn" onClick="filter('write')">
+                    <span id="write-c" class="filter">
+                        <svg id="write-i" class="icon" viewBox="0 0 16 16" stroke="#FFF" fill="none"
+                            stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M11.3333 2C11.5084 1.8249 11.7163 1.68601 11.9451 1.59125C12.1738 1.49649 12.419 1.44772 12.6667 1.44772C12.9143 1.44772 13.1595 1.49649 13.3883 1.59125C13.617 1.68601 13.8249 1.8249 14 2C14.1751 2.1751 14.314 2.38296 14.4087 2.61174C14.5035 2.84051 14.5523 3.08571 14.5523 3.33333C14.5523 3.58096 14.5035 3.82615 14.4087 4.05493C14.314 4.2837 14.1751 4.49157 14 4.66667L5 13.6667L1.33333 14.6667L2.33333 11L11.3333 2Z" />
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="col mb-5">
+                <div id="creatives" class="row">
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="./js/dict.js"></script>
+        <script src="./js/main.js"></script>
+</body>
+
 </html>
