@@ -1,8 +1,5 @@
 import React from 'react';
 
-import * as colors from '../../Colors.js';
-import * as fonts from '../../Fonts.js';
-
 /**  props: 
  * social: {
  *    facebook, 

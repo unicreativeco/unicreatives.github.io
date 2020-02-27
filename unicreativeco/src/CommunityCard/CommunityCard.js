@@ -1,4 +1,5 @@
 import React from 'react';
+
 import CommunityCardTextContent from './CommunityCardTextContent';
 import LinkCollection from './Links/LinkCollection';
 import SkillsetCollection from './Skillset/SkillsetCollection';

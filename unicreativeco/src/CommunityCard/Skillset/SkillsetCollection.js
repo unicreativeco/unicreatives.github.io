@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as colors from '../../Colors.js';
+
 /**  props:
  *  skillset: {
  *    art,
@@ -43,7 +44,6 @@ function SkillsetCollection(props) {
       {
         props.skillset.write ? <div>write</div> : ''
       }
-
     </div>
   )
 }
